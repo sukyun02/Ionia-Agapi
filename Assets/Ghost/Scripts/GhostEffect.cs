@@ -1,32 +1,39 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 
 public class GhostEffect : MonoBehaviour
 {
     private SpriteRenderer sr;
     private Vector3 startPos;
 
-    [Header("ºÎÀ¯ È¿°ú (À§¾Æ·¡ Èçµé¸²)")]
-    public float floatSpeed = 1.0f;      // À§¾Æ·¡·Î ¿òÁ÷ÀÌ´Â ¼Óµµ
-    public float floatHeight = 0.1f;     // ÀÌµ¿ ³ôÀÌ (À¯´Ö)
+    [Header("ë¶€ìœ  íš¨ê³¼ (ìœ„ì•„ë˜ í”ë“¤ë¦¼)")]
+    public float floatSpeed = 1.0f;
+    public float floatHeight = 0.1f;
 
-    [Header("±ôºıÀÓ È¿°ú (Åõ¸íµµ º¯È­)")]
-    public float flickerSpeed = 1.5f;    // ±ôºıÀÌ´Â ¼Óµµ
-    public float alphaMin = 0.25f;       // ÃÖ¼Ò ¾ËÆÄ°ª
-    public float alphaMax = 0.45f;       // ÃÖ´ë ¾ËÆÄ°ª
+    [Header("ê¹œë¹¡ì„ íš¨ê³¼ (íˆ¬ëª…ë„ ë³€í™”)")]
+    public float flickerSpeed = 1.5f;
+    public float alphaMin = 0.25f;
+    public float alphaMax = 0.45f;
+
+    private GhostChase ghostChase;
 
     void Start()
     {
         sr = GetComponent<SpriteRenderer>();
-        startPos = transform.position;
+        startPos = transform.localPosition;
+
+        ghostChase = GetComponentInParent<GhostChase>();
     }
 
     void Update()
     {
-        // ºÎÀ¯ È¿°ú
+        // âœ… ë¶€ìœ  íš¨ê³¼ëŠ” ê³„ì†
         float offsetY = Mathf.Sin(Time.time * floatSpeed) * floatHeight;
-        transform.position = startPos + new Vector3(0f, offsetY, 0f);
+        transform.localPosition = startPos + new Vector3(0f, offsetY, 0f);
 
-        // ±ôºıÀÓ È¿°ú (¾ËÆÄ°ª¸¸ Á¶Àı)
+        // âœ… ê¹œë¹¡ì„ íš¨ê³¼ëŠ” ì‚¬ë¼ì§€ëŠ” ì¤‘ì´ë©´ ì¤‘ë‹¨
+        if (ghostChase != null && ghostChase.safeZoneReached)
+            return;
+
         float alpha = Mathf.Lerp(alphaMin, alphaMax, (Mathf.Sin(Time.time * flickerSpeed) + 1f) / 2f);
         Color c = sr.color;
         sr.color = new Color(c.r, c.g, c.b, alpha);
