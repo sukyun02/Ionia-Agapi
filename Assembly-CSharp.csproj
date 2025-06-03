@@ -61,29 +61,29 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.26f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Ghost\Scripts\GhostEffect.cs" />
+    <Compile Include="Assets\Player\Scripts\Flower.cs" />
     <Compile Include="Assets\Player\Sources\No\2D Horror\Scripts\GamePlayScripts\JumpScareSound.cs" />
     <Compile Include="Assets\Player\Sources\No\2D Horror\Scripts\MenuScript\ButtonManager.cs" />
     <Compile Include="Assets\Player\Sources\No\2D Horror\Scripts\GamePlayScripts\PassLevel.cs" />
-    <Compile Include="Assets\Scripts\HealthUI.cs" />
-    <Compile Include="Assets\Scripts\PlayerHealth.cs" />
     <Compile Include="Assets\Player\Sources\No\2D Horror\Scripts\GamePlayScripts\JumpScare.cs" />
+    <Compile Include="Assets\Player\Scripts\PlatformerData.cs" />
     <Compile Include="Assets\Player\Sources\No\2D Horror\Scripts\GamePlayScripts\JumpScareSoundMoreTimes.cs" />
     <Compile Include="Assets\Player\Sources\No\2D Horror\Scripts\MenuScript\LevelUnlock\LevelManagerUnlocked.cs" />
-    <Compile Include="Assets\Scripts\Player.cs" />
+    <Compile Include="Assets\Player\Scripts\PlatformerAnimation.cs" />
+    <Compile Include="Assets\PlayerHealth.cs" />
     <Compile Include="Assets\Player\Sources\No\2D Horror\Scripts\GameScripts\CharacterDie.cs" />
     <Compile Include="Assets\Player\Sources\No\2D Horror\Scripts\MenuScript\LevelUnlock\ButtonSettings.cs" />
-    <Compile Include="Assets\Scripts\PlatformerData.cs" />
-    <Compile Include="Assets\Scripts\PlatformerMovement.cs" />
-    <Compile Include="Assets\Scripts\PlayerMovement.cs" />
-    <Compile Include="Assets\Scripts\PlatformerAnimation.cs" />
-    <Compile Include="Assets\Scripts\Flower.cs" />
+    <Compile Include="Assets\HealthUI.cs" />
+    <Compile Include="Assets\Ghost\Scripts\GhostChase.cs" />
+    <Compile Include="Assets\Player\Scripts\PlatformerMovement.cs" />
     <Compile Include="Assets\Background\Stage14\BG_scripts\movingPlatform.cs" />
     <Compile Include="Assets\Player\Sources\No\2D Horror\Scripts\GameScripts\SmoothCamera.cs" />
+    <Compile Include="Assets\Player\Scripts\PlayerMovement.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Player\Sources\Yes\Free Effects for Platformer\License.txt" />
     <None Include="Assets\Player\Sources\Yes\Free Effects for Platformer\Font.txt" />
-    <None Include="Assets\Background\Stage235\waiting\Graduation Cat\HouseInteriorLITE\README.txt" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
