@@ -61,6 +61,7 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.26f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Ghost\Scripts\GhostEffect.cs" />
     <Compile Include="Assets\Player\Sources\No\2D Horror\Scripts\GamePlayScripts\JumpScareSound.cs" />
     <Compile Include="Assets\Player\Sources\No\2D Horror\Scripts\MenuScript\ButtonManager.cs" />
     <Compile Include="Assets\Player\Sources\No\2D Horror\Scripts\GamePlayScripts\PassLevel.cs" />
